@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICatalago", "APICatalago\APICatalago.csproj", "{539F434A-AC99-47E9-91E9-0CE880DAA1E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{539F434A-AC99-47E9-91E9-0CE880DAA1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539F434A-AC99-47E9-91E9-0CE880DAA1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539F434A-AC99-47E9-91E9-0CE880DAA1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539F434A-AC99-47E9-91E9-0CE880DAA1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {099E78C9-7BF9-4E34-AAF9-C2245047338D}
+	EndGlobalSection
+EndGlobal
