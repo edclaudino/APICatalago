@@ -1,6 +1,7 @@
 ﻿using APICatalago.Context;
 using APICatalago.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,18 @@ namespace APICatalago.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Produto>> Get()
         {
-            return _context.Produtos.ToList();
+            return _context.Produtos.AsNoTracking().ToList();
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Produto> Get(int id)
+        {
+            var produto = _context.Produtos.AsNoTracking().FirstOrDefault(p => p.ProdutoId == id);
+            if (produto == null)
+            {
+                return NotFound();
+            }
+            return produto;
         }
     }
 }
