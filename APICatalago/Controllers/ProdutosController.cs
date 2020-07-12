@@ -26,7 +26,7 @@ namespace APICatalago.Controllers
             return _context.Produtos.AsNoTracking().ToList();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "ObterProduto")]
         public ActionResult<Produto> Get(int id)
         {
             var produto = _context.Produtos.AsNoTracking().FirstOrDefault(p => p.ProdutoId == id);
@@ -35,6 +35,19 @@ namespace APICatalago.Controllers
                 return NotFound();
             }
             return produto;
+        }
+
+        [HttpPost]
+        public ActionResult Post([FromBody]Produto produto)
+        {
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
+
+            _context.Produtos.Add(produto);
+            _context.SaveChanges();
+            return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId, produto });
         }
     }
 }
